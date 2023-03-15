@@ -24,11 +24,24 @@ export const homeHeader = () =>{
     const li2 = document.createElement('li');
     const li3 = document.createElement('li');
 
-    li.textContent = 'Home';
-    li2.textContent = 'Menu';
-    li3.textContent = 'Contact';
-    li3.classList.add('hello')
+    const homeLink = document.createElement('a');
+    const menuLink = document.createElement('a');
+    const contactLink = document.createElement('a');
 
+     homeLink.href = '#';
+    menuLink.href = '#';
+    contactLink.href = '#';
+
+    homeLink.textContent = 'Home';
+    menuLink.textContent = 'Menu';
+    contactLink.textContent = 'Contact';
+
+
+    li.appendChild(homeLink);
+    li2.appendChild(menuLink);
+    li3.appendChild(contactLink);
+
+   
     ul.appendChild(li);
     ul.appendChild(li2);
     ul.appendChild(li3);
@@ -68,7 +81,7 @@ export const homePage = () =>{
     menuBtn.textContent = 'Menu';
     BookaTableBtn.textContent = 'Book a table';
     const buttons = document.createElement('div');
-   
+    buttons.classList.add('leftColumnButtons')
     buttons.appendChild(menuBtn);
     buttons.appendChild(BookaTableBtn);
 
@@ -90,13 +103,17 @@ export const homePage = () =>{
     return leftColumnDiv;
    }
    const rightColumn = ()=>{
+    
     const restaurantImgDiv = document.createElement('img');
     const homePageDishImg = document.createElement('img');
     restaurantImgDiv.src = 'restaurant.png';
     restaurantImgDiv.classList.add('restaurantImg')
     homePageDishImg.src = 'homepage-dish.png';
-    homePageDishImg.classList.add('homeDish')
-    return {restaurantImgDiv,homePageDishImg};
+    homePageDishImg.classList.add('homeDish');
+    rightColumnDiv.appendChild(restaurantImgDiv);
+    rightColumnDiv.appendChild(homePageDishImg);
+    rightColumnDiv.classList.add('rightColumnDiv');
+    return rightColumnDiv;
    }
    return {leftColumn,rightColumn};
 

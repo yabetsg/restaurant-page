@@ -13,8 +13,8 @@ img.src = 'homepage-dish.png';
 const combineLeftAndRightColumn = document.createElement('div');
 combineLeftAndRightColumn.classList.add('homeGrid');
 combineLeftAndRightColumn.appendChild(homePage().leftColumn());
-combineLeftAndRightColumn.appendChild(homePage().rightColumn().restaurantImgDiv);
-// combineLeftAndRightColumn.appendChild(homePage().rightColumn().homePageDishImg);
+combineLeftAndRightColumn.appendChild(homePage().rightColumn());
+//  combineLeftAndRightColumn.appendChild(homePage().rightColumn().homePageDishImg);
 content.appendChild(homeHeader());
 
 content.appendChild(combineLeftAndRightColumn);
