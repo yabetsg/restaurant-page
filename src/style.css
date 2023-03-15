@@ -2,20 +2,19 @@
     --main-bg-color:rgba(255, 255, 255,100%);
     --book-bg-color:rgba(234, 109, 39,100%);
     --text-color:rgba(16, 26, 36,100%);
-    --big-text: 4rem;
+    --big-text: 3rem;
     --small-text: 1rem;
     --btn-text: 1.25rem;
     --home-img-radius: 100px 50px 100px 50px;
     --btn-radius: 17px 8px 17px 8px;
     --menu-bg-color:rgba(16,26,36,100%);
 }
+html{
+    margin: 0;
+}
 body{
     margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;  
+	
     background-color: var(--main-bg-color);
     color: var(--text-color);
     font-size: 1.5rem;
@@ -73,17 +72,21 @@ header{
     grid-template-columns: repeat(2,1fr);
     
 }
-.homeDish{
+.homePageDishContainer{
     position: relative;
     top: -17em;
-    left: 1em;
+    left: -2em;
+   
     transform: scale(0.7);
 }
+.homeDish {
+    border-radius: var(--home-img-radius);
+  }
 .restaurantImg{
     border-radius: var(--home-img-radius);
-    transform: scale(0.7);
-   
+    transform: scale(0.65);
     margin-left: 4.2em;
+   margin-top: -50px;
 }
 
 button{
@@ -102,6 +105,7 @@ header>button{
 }
 .rightColumnDiv{
     max-height: 650px;
+    
 }
 .leftColumnDiv{
     display: flex;

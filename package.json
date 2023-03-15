@@ -89,7 +89,7 @@
   "devDependencies": {
     "css-loader": "^6.7.3",
     "style-loader": "^3.3.2",
-    "webpack": "^5.76.1",
+    "webpack": "^5.76.2",
     "webpack-cli": "^5.0.1"
   },
   "scripts": {
@@ -106,5 +106,6 @@
   "bugs": {
     "url": "https://github.com/yabetsg/restaurant-page/issues"
   },
-  "homepage": "https://github.com/yabetsg/restaurant-page#readme"
+  "homepage": "https://github.com/yabetsg/restaurant-page#readme",
+  "main": "webpack.config.js"
 }

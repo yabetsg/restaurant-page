@@ -106,12 +106,15 @@ export const homePage = () =>{
     
     const restaurantImgDiv = document.createElement('img');
     const homePageDishImg = document.createElement('img');
+    const homePageDishContainer = document.createElement('div');
+    homePageDishContainer.classList.add('homePageDishContainer');
+    homePageDishContainer.appendChild(homePageDishImg);
     restaurantImgDiv.src = 'restaurant.png';
     restaurantImgDiv.classList.add('restaurantImg')
     homePageDishImg.src = 'homepage-dish.png';
     homePageDishImg.classList.add('homeDish');
     rightColumnDiv.appendChild(restaurantImgDiv);
-    rightColumnDiv.appendChild(homePageDishImg);
+    rightColumnDiv.appendChild(homePageDishContainer);
     rightColumnDiv.classList.add('rightColumnDiv');
     return rightColumnDiv;
    }
