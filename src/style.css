@@ -1,0 +1,96 @@
+:root{
+    --main-bg-color:rgba(255, 255, 255,100%);
+    --book-bg-color:rgba(234, 109, 39,100%);
+    --text-color:rgba(16, 26, 36,100%);
+    --big-text: 4.4rem;
+    --small-text: 1rem;
+    --btn-text: 1.25rem;
+    --home-img-radius: 100px 50px 100px 50px;
+    --btn-radius: 17px 8px 17px 8px;
+    --menu-bg-color:rgba(16,26,36,100%);
+}
+body{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;  
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+ 
+    gap: 15px;
+
+}
+#content{
+    display: flex;
+    gap: 140px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.logoContainer{
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+}
+.titleContainer{
+    font-size: var(--big-text);
+    font-weight: bold;
+    max-width: 510px;
+    max-height: 144px;
+}
+.paragraphContainer{
+    font-size: var(--small-text);
+    font-weight: lighter;
+    max-width: 376px;
+    max-height: 115px;
+}
+.homeGrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+.homeDish{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+.restaurantImg{
+    border-radius: var(--home-img-radius);
+}
+button{
+    font-size: var(--btn-text);
+    font-weight:500;
+    color: white;
+}
+.leftColumnDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 70px ;
+}
+.menuBtn{
+    max-width: 167px;
+    max-height: 54px;
+    border-radius: var(--btn-radius);
+    background-color: var(--menu-bg-color);
+}
+.bookBtn{
+    max-width: 167px;
+    max-height: 54px;
+    border-radius: var(--btn-radius);
+    background-color: var(--book-bg-color);
+}
+.socials>img{
+    border: 1px solid black;
+    border-radius: 100%;
+}
