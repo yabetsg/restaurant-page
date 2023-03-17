@@ -8,6 +8,7 @@
     --home-img-radius: 100px 50px 100px 50px;
     --btn-radius: 17px 8px 17px 8px;
     --menu-bg-color:rgba(16,26,36,100%);
+    --mediumn-text: 2rem;
 }
 html{
     margin: 0;
@@ -53,6 +54,7 @@ li:hover{
 header{
     display: flex;
     justify-content: space-around;
+    padding: 10px 0px 10px 0px;
 }
 .titleContainer{
     font-size: var(--big-text);
@@ -99,7 +101,7 @@ button{
     background-color: var(--book-bg-color);
   
 }
-header>button{
+header>button {
     margin-top: 10px;
     border-style: none;
 }

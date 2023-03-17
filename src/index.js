@@ -1,13 +1,15 @@
 import { homeHeader , homePage} from "./home";
+import { menuHeader, menuDishes, createGridContainer } from "./menu";
 
 import './style.css';
+import './menuStyles.css';
 
-const loadHome = (() =>{
-
-
-console.log(homeHeader());
-console.log(homePage().leftColumn());
 const content = document.getElementById('content');
+const loadHome = () =>{
+
+
+
+// const content = document.getElementById('content');
 const img = document.createElement('img');
 img.src = 'homepage-dish.png';
 const combineLeftAndRightColumn = document.createElement('div');
@@ -18,5 +20,32 @@ combineLeftAndRightColumn.appendChild(homePage().rightColumn());
 content.appendChild(homeHeader());
 
 content.appendChild(combineLeftAndRightColumn);
-})();
+};
+const loadMenu = (() => {
+    const menuMainContent = document.createElement('div');
+    const menuHeaderContent = document.createElement('div');
+    menuMainContent.classList.add('menuMainContent')
+    menuHeaderContent.classList.add('menuHeaderContent')
+    const description ='Lorem ipsum dolor sit , consectetur adipiscing elit, sed do eiusmod tempor';
+    menuHeaderContent.appendChild(homeHeader());
 
+    menuMainContent.appendChild(menuHeader());
+    const grid = menuDishes('dish1.png','Lumpia with Suace',description,'$12');
+    const grid2 = menuDishes('dish2.png','Tofu Chili',description,'$112');
+    const grid3 = menuDishes('dish3.png','Fish and Veggie',description,'$22');
+    const grid4 = menuDishes('dish4.png','Egg and Cocumber',description,'$42');
+    const grid5 = menuDishes('dish2.png','Tofu Chili',description,'$12');
+    const grid6 = menuDishes('dish4.png','Egg and Cocumber',description,'$2');
+    const grid7 = menuDishes('dish1.png','Fish and Veggie',description,'$62');
+    const grid8 = menuDishes('dish3.png','Fish and Veggie',description,'$90');
+    const grid9 = menuDishes('dish1.png','Fish and Veggie',description,'$62');
+    const grid10 = menuDishes('dish3.png','Fish and Veggie',description,'$90');
+
+    menuMainContent.appendChild(createGridContainer(grid,grid2,grid3,grid4,grid5,grid6,grid7,grid8,grid9,grid10));
+     
+    // combineLeftAndRightColumn.appendChild(menuDishes('dish1.png','Fish and Veggie',description));
+    content.appendChild(menuHeaderContent)
+    content.appendChild(menuMainContent);
+
+
+})();
