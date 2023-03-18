@@ -8,7 +8,7 @@
     --home-img-radius: 100px 50px 100px 50px;
     --btn-radius: 17px 8px 17px 8px;
     --menu-bg-color:rgba(16,26,36,100%);
-    --mediumn-text: 2rem;
+    --medium-text: 1.5rem;
 }
 html{
     margin: 0;
@@ -55,6 +55,7 @@ header{
     display: flex;
     justify-content: space-around;
     padding: 10px 0px 10px 0px;
+    background-color: white;
 }
 .titleContainer{
     font-size: var(--big-text);
@@ -103,6 +104,8 @@ button{
 }
 header>button {
     margin-top: 10px;
+    max-width: 167px;
+    max-height: 35px;
     border-style: none;
 }
 .rightColumnDiv{

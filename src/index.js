@@ -1,8 +1,9 @@
 import { homeHeader , homePage} from "./home";
-import { menuHeader, menuDishes, createGridContainer } from "./menu";
-
+import { header, menuDishes, createGridContainer } from "./menu";
+import { contactInfo } from "./contact";
 import './style.css';
 import './menuStyles.css';
+import './contactStyles.css';
 
 const content = document.getElementById('content');
 const loadHome = () =>{
@@ -21,7 +22,7 @@ content.appendChild(homeHeader());
 
 content.appendChild(combineLeftAndRightColumn);
 };
-const loadMenu = (() => {
+const loadMenu = () => {
     const menuMainContent = document.createElement('div');
     const menuHeaderContent = document.createElement('div');
     menuMainContent.classList.add('menuMainContent')
@@ -29,7 +30,7 @@ const loadMenu = (() => {
     const description ='Lorem ipsum dolor sit , consectetur adipiscing elit, sed do eiusmod tempor';
     menuHeaderContent.appendChild(homeHeader());
 
-    menuMainContent.appendChild(menuHeader());
+    menuMainContent.appendChild(header('Our Spcial Dishes',description));
     const grid = menuDishes('dish1.png','Lumpia with Suace',description,'$12');
     const grid2 = menuDishes('dish2.png','Tofu Chili',description,'$112');
     const grid3 = menuDishes('dish3.png','Fish and Veggie',description,'$22');
@@ -48,4 +49,19 @@ const loadMenu = (() => {
     content.appendChild(menuMainContent);
 
 
+};
+
+const loadContact = (() => {
+    const contactMainContent = document.createElement('div');
+    const contactHeaderContent = document.createElement('div');
+    
+    contactMainContent.classList.add('contactMainContent')
+    contactHeaderContent.classList.add('contactHeaderContent')
+    
+    contactHeaderContent.appendChild(homeHeader());
+    
+    contactMainContent.appendChild(header('Contact Us', ''));
+    contactMainContent.appendChild(contactInfo());
+    content.appendChild(contactHeaderContent);
+    content.appendChild(contactMainContent);
 })();

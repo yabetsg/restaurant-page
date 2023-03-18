@@ -1,12 +1,12 @@
-export const menuHeader = () => {
+export const header = (title,description) => {
     const header = document.createElement('div');
     header.classList.add('menuHeader');
     const headerText = document.createElement('div');
     headerText.classList.add('headerTitle');
     const headerParagraph = document.createElement('div');
     headerParagraph.classList.add('headerParagraph');
-    headerParagraph.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt';
-    headerText.textContent = 'Our Spcial Dishes';
+    headerParagraph.textContent = description; //'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'
+    headerText.textContent = title; //'Our Spcial Dishes'
     header.appendChild(headerText);
     header.appendChild(headerParagraph);
     
