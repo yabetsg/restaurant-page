@@ -32,6 +32,11 @@ export const homeHeader = () =>{
     menuLink.href = '#';
     contactLink.href = '#';
 
+    homeLink.classList.add('home');
+    menuLink.classList.add('menu');
+    contactLink.classList.add('contact');
+    
+
     homeLink.textContent = 'Home';
     menuLink.textContent = 'Menu';
     contactLink.textContent = 'Contact';
@@ -54,8 +59,8 @@ export const homeHeader = () =>{
     header.appendChild(logoContainerAndLogoTextCotainer);
     header.appendChild(nav);
     header.appendChild(headerButton);
-
-    return header;
+    
+    return {header,homeLink,menuLink,contactLink,headerButton};
 }
 
 export const homePage = () =>{
@@ -121,3 +126,4 @@ export const homePage = () =>{
    return {leftColumn,rightColumn};
 
 }
+

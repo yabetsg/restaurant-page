@@ -46,7 +46,11 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
    
+}
+.menuHeader>:nth-child(1){
+    font-family: 'JelleeBold';
 }
 .dishGrid{
     max-width: 200px;

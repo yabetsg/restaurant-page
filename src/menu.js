@@ -1,6 +1,6 @@
-export const header = (title,description) => {
+export const header = (title,description,className) => {
     const header = document.createElement('div');
-    header.classList.add('menuHeader');
+    header.classList.add(className);
     const headerText = document.createElement('div');
     headerText.classList.add('headerTitle');
     const headerParagraph = document.createElement('div');

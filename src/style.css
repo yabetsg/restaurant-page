@@ -49,6 +49,7 @@ li:hover{
     font-size: 1.8rem;
     font-weight: bold;
     gap: 10px;
+    font-family: 'JelleeBold';
 }
 
 header{
@@ -61,7 +62,7 @@ header{
     font-size: var(--big-text);
     font-weight: bold;
     max-width: 510px;
-  
+    font-family: 'JelleeBold';
 }
 .paragraphContainer{
     font-size: var(--small-text);

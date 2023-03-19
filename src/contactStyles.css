@@ -1,4 +1,9 @@
-.menuHeader{
+.contactHeader{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     font-family: 'JelleeBold';
     text-decoration: underline;
 }
@@ -42,7 +47,7 @@
     display: flex;
     flex-direction: column;
     gap: 63px;
-    align-items: center;
+
     justify-content: center;
     font-family: 'AveriaRegular';
 }
