@@ -1,80 +1,74 @@
+export const homeHeader = () => {
+  const header = document.createElement('header');
+  const logoContainerAndLogoTextCotainer = document.createElement('div');
+  logoContainerAndLogoTextCotainer.classList.add('logoContainer');
+  const logoContainer = document.createElement('div');
+  const logoTextContainer = document.createElement('div');
+  const logo = document.createElement('img');
+  const logoText = document.createElement('div');
+  logoText.textContent = 'restaurant';
+  logoContainer.appendChild(logo);
+  logoTextContainer.appendChild(logoText);
+  logo.src = 'img/logo.svg';
+  logoContainerAndLogoTextCotainer.appendChild(logoContainer);
+  logoContainerAndLogoTextCotainer.appendChild(logoTextContainer);
 
+  const nav = document.createElement('nav');
+  const ul = document.createElement('ul');
 
-export const homeHeader = () =>{
+  const li = document.createElement('li');
+  const li2 = document.createElement('li');
+  const li3 = document.createElement('li');
 
-    const header = document.createElement('header');
-    const logoContainerAndLogoTextCotainer = document.createElement('div');
-    logoContainerAndLogoTextCotainer.classList.add('logoContainer');
-    const logoContainer = document.createElement('div');
-    const logoTextContainer = document.createElement('div');
-    const logo =  document.createElement('img');
-    const logoText = document.createElement('div');
-    logoText.textContent = 'restaurant';
-    logoContainer.appendChild(logo);
-    logoTextContainer.appendChild(logoText);
-    logo.src = 'logo.svg';
-    logoContainerAndLogoTextCotainer.appendChild(logoContainer);
-    logoContainerAndLogoTextCotainer.appendChild(logoTextContainer);
+  const homeLink = document.createElement('a');
+  const menuLink = document.createElement('a');
+  const contactLink = document.createElement('a');
 
+  homeLink.href = '#';
+  menuLink.href = '#';
+  contactLink.href = '#';
 
-    const nav = document.createElement('nav');
-    const ul = document.createElement('ul');
+  homeLink.classList.add('home');
 
-    const li = document.createElement('li');
-    const li2 = document.createElement('li');
-    const li3 = document.createElement('li');
+  menuLink.classList.add('menu');
+  contactLink.classList.add('contact');
 
-    const homeLink = document.createElement('a');
-    const menuLink = document.createElement('a');
-    const contactLink = document.createElement('a');
+  homeLink.textContent = 'Home';
+  menuLink.textContent = 'Menu';
+  contactLink.textContent = 'Contact';
 
-     homeLink.href = '#';
-    menuLink.href = '#';
-    contactLink.href = '#';
+  li.appendChild(homeLink);
+  li2.appendChild(menuLink);
+  li3.appendChild(contactLink);
 
-    homeLink.classList.add('home');
-    menuLink.classList.add('menu');
-    contactLink.classList.add('contact');
-    
+  ul.appendChild(li);
+  ul.appendChild(li2);
+  ul.appendChild(li3);
 
-    homeLink.textContent = 'Home';
-    menuLink.textContent = 'Menu';
-    contactLink.textContent = 'Contact';
+  nav.appendChild(ul);
 
+  const headerButton = document.createElement('button');
+  headerButton.textContent = 'Book a table';
 
-    li.appendChild(homeLink);
-    li2.appendChild(menuLink);
-    li3.appendChild(contactLink);
+  header.appendChild(logoContainerAndLogoTextCotainer);
+  header.appendChild(nav);
+  header.appendChild(headerButton);
 
-   
-    ul.appendChild(li);
-    ul.appendChild(li2);
-    ul.appendChild(li3);
+  return {
+    header, homeLink, menuLink, contactLink, headerButton,
+  };
+};
 
-    nav.appendChild(ul);
+export const homePage = () => {
+  const leftColumnDiv = document.createElement('div');
+  const rightColumnDiv = document.createElement('div');
 
-    const headerButton = document.createElement('button');
-    headerButton.textContent = 'Book a table';
-
-    header.appendChild(logoContainerAndLogoTextCotainer);
-    header.appendChild(nav);
-    header.appendChild(headerButton);
-    
-    return {header,homeLink,menuLink,contactLink,headerButton};
-}
-
-export const homePage = () =>{
-        const main = document.createElement('main');
-        const leftColumnDiv = document.createElement('div');
-        const rightColumnDiv = document.createElement('div');
-
-    const leftColumn = () =>{
-
+  const leftColumn = () => {
     leftColumnDiv.classList.add('leftColumnDiv');
-   
+
     const titleContainer = document.createElement('div');
     const paragraphContainer = document.createElement('div');
-    
+
     titleContainer.textContent = 'We provide the best food for you';
     titleContainer.classList.add('titleContainer');
     paragraphContainer.classList.add('paragraphContainer');
@@ -86,7 +80,7 @@ export const homePage = () =>{
     menuBtn.textContent = 'Menu';
     BookaTableBtn.textContent = 'Book a table';
     const buttons = document.createElement('div');
-    buttons.classList.add('leftColumnButtons')
+    buttons.classList.add('leftColumnButtons');
     buttons.appendChild(menuBtn);
     buttons.appendChild(BookaTableBtn);
 
@@ -95,9 +89,9 @@ export const homePage = () =>{
     const twitter = document.createElement('img');
     const facebook = document.createElement('img');
     const instagram = document.createElement('img');
-    twitter.src = 'facebook.png';
-    facebook.src = 'facebook.png';
-    instagram.src = 'facebook.png';
+    twitter.src = 'img/facebook.png';
+    facebook.src = 'img/facebook.png';
+    instagram.src = 'img/facebook.png';
     socials.appendChild(twitter);
     socials.appendChild(facebook);
     socials.appendChild(instagram);
@@ -106,24 +100,21 @@ export const homePage = () =>{
     leftColumnDiv.appendChild(buttons);
     leftColumnDiv.appendChild(socials);
     return leftColumnDiv;
-   }
-   const rightColumn = ()=>{
-    
+  };
+  const rightColumn = () => {
     const restaurantImgDiv = document.createElement('img');
     const homePageDishImg = document.createElement('img');
     const homePageDishContainer = document.createElement('div');
     homePageDishContainer.classList.add('homePageDishContainer');
     homePageDishContainer.appendChild(homePageDishImg);
-    restaurantImgDiv.src = 'restaurant.png';
-    restaurantImgDiv.classList.add('restaurantImg')
-    homePageDishImg.src = 'homepage-dish.png';
+    restaurantImgDiv.src = 'img/restaurant.png';
+    restaurantImgDiv.classList.add('restaurantImg');
+    homePageDishImg.src = 'img/homepage-dish.png';
     homePageDishImg.classList.add('homeDish');
     rightColumnDiv.appendChild(restaurantImgDiv);
     rightColumnDiv.appendChild(homePageDishContainer);
     rightColumnDiv.classList.add('rightColumnDiv');
     return rightColumnDiv;
-   }
-   return {leftColumn,rightColumn};
-
-}
-
+  };
+  return { leftColumn, rightColumn };
+};
